@@ -14,7 +14,8 @@
         <script id="home-tpl" type="text/x-handlebars-template">
             <div class='header'><h1>Home</h1></div>
             <div class='search-bar'><input class='search-key' type="search" /></div>
-            <div class="scroll"><ul class='employee-list'></ul></div>
+            <!--<div class="scroll"><ul class='employee-list'></ul></div>-->
+            <div id="geolocationHome" style="width:480px; height:480px;"></div>
         </script>
 
         <script id="employee-tpl" type="text/x-handlebars-template">
@@ -24,6 +25,7 @@
                 <h1>{{firstName}} {{lastName}}</h1>
                 <h2>{{title}}</h2>
                 <span class="location"></span>
+                <div id="geolocation" style="width:480px; height:480px;"></div>
                 <ul>
                     <li><a href="tel:{{officePhone}}">Call Office<br />{{officePhone}}</a></li>
                     <li><a href="tel:{{cellPhone}}">Call Cell<br />{{cellPhone}}</a></li>
@@ -49,6 +51,8 @@
         <script src="js/HomeView.js"></script>
         <script src="js/EmployeeView.js"></script>
         <script src="js/main.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBJ9v6YN32sW2LSf0XD7DX7NI_mbFFb0cM&sensor=false">
+        </script>
     
     </body>
 </html>

@@ -106,10 +106,30 @@ var app = {
         var self = this;
         this.detailsURL = /^#employees\/(\d{1,})/;
         this.registerEvents();
+        
         this.store = new MemoryStore(function () {
-            self.route();
+            
         });
-    }
+        //this.store = window.openDatabase("test", "1.0", "Test DB", 1000000);
+        //this.store.transaction(self.populateDB, self.errorCB, self.successCB);
+        self.route();
+        
+    },
+    //populateDB: function (tx) {
+    //    tx.executeSql('DROP TABLE IF EXISTS DEMO');
+    //    tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+    //    tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+    //    tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+    //},
+
+    //errorCB: function (tx, err) {
+    //    alert("Error processing SQL: "+err);
+    //},
+
+    //successCB: function () {
+    //    alert("success!");
+    //}
+
 
 };
 
